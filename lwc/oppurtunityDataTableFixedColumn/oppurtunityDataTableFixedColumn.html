@@ -1,0 +1,172 @@
+<template>
+    <!-- <section class="oppurtunityContainer"> -->
+        <section class="opportunityDataTable">
+            <article class="slds-grid headerSection">
+                    <lightning-icon 
+                    icon-name="utility:back" 
+                    alternative-text="Connected" 
+                    size="medium" 
+                    variant="inverse"
+                    class="alignCenter slds-p-around_small borderRight"
+                    ></lightning-icon>
+                    <div class="slds-grid slds-p-horizontal_small columnGap">
+                        <img src={logo} alt="logo" class="alignCenter">
+                        <h1 class="slds-text-color_inverse alignCenter"> <span class="slds-text-heading_small">ForeCasting &nbsp;: &nbsp;&nbsp;</span> <b class="slds-text-heading_medium">Oppotunity Name</b></h1> 
+                    </div>
+            </article>
+            <h1 class="slds-p-horizontal_large slds-p-vertical_medium f-25 slds-text-title_bold bg-white">Forecast Name</h1>
+           
+            <article>
+                <div class="selectedDropdown bg-totalBg slds-p-around_medium slds-grid slds-grid_align-end">
+                    <div class="select-box">
+                        <div class="options-container">
+                          <div class="option">
+                            <input type="radio" class="radio" id="automobiles" name="category"/>
+                            <label for="automobiles">Automobiles</label>
+                          </div>
+                
+                          <div class="option">
+                            <input type="radio" class="radio" id="film" name="category" />
+                            <label for="film">Film & Animation</label>
+                          </div>
+                
+                          <div class="option">
+                            <input type="radio" class="radio" id="science" name="category" />
+                            <label for="science">Science & Technology</label>
+                          </div>
+                
+                          <div class="option">
+                            <input type="radio" class="radio" id="art" name="category" />
+                            <label for="art">Art</label>
+                          </div>
+                
+                          <div class="option">
+                            <input type="radio" class="radio" id="music" name="category" />
+                            <label for="music">Music</label>
+                          </div>
+                
+                          <div class="option">
+                            <input type="radio" class="radio" id="travel" name="category" />
+                            <label for="travel">Travel & Events</label>
+                          </div>
+                
+                          <div class="option">
+                            <input type="radio" class="radio" id="sports" name="category" />
+                            <label for="sports">Sports</label>
+                          </div>
+                
+                          <div class="option">
+                            <input type="radio" class="radio" id="news" name="category" />
+                            <label for="news">News & Politics</label>
+                          </div>
+                
+                          <div class="option">
+                            <input type="radio" class="radio" id="tutorials" name="category" />
+                            <label for="tutorials">Tutorials</label>
+                          </div>
+                        </div>
+                
+                        <div class="selected">
+                          Select Category
+                        </div>
+                      </div>
+                </div>
+                <div class="fixedColumntable">
+                    <div class="totalWrapper">
+                        <div class="fixColumn">
+                            <div class="thead">
+                                <span>Products</span>
+                            </div>
+                            <div class="tbody">
+                                <div class="trow">
+                                    <span>Product 1</span>
+                                </div>
+                                <div class="trow">
+                                    <span>Product 2</span>
+                                </div>
+                                <div class="trow">
+                                    <span>Product 3</span>
+                                </div>
+                                <div class="trow">
+                                    <span>Product 4</span>
+                                </div>
+                                <div class="trow bg-totalBg fontBold totalHeader">
+                                    <span>Total</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="restColumns">
+                            <div class="thead">
+                                <!-- <span>Int2</span><span>Int3</span><span>Int4</span><span>Int5</span> -->
+                                <template for:each={tableHeader} for:item="header">
+                                    <span key={header.id}>{header}</span>
+                                </template>
+                            </div>
+                            <div class="tbody">
+                                <template for:each={tableData} for:item="data">
+                                    <div class="trow" key={data.id}>
+                                        <span>{data.unitPrice}</span>
+                                        <span>{data.startMonth}</span>
+                                        <span>{data.revenueType}</span>
+                                        <span>{data.revenueRecognitionName}</span>
+                                        <span>{data.revenueRecognitionId}</span>
+                                        <span>{data.qty}</span>
+                                        <span>{data.priorMRR}</span>
+                                        <span>{data.productItemId}</span>
+                                        <span>{data.productFLIId}</span>
+                                        <span>{data.optionItemName}</span>
+                                        <span>{data.optionItemId}</span>
+                                        <span>{data.optionFLIId}</span>
+                                        <span>{data.monthsVR}</span>
+                                        <span>{data.monthsNRC}</span>
+                                        <span>{data.monthsMRC}</span>
+                                        <span>{data.months}</span>
+                                        <span>{data.displayUnitPrice}</span>
+                                        <span>{data.displayQty}</span>
+                                        <span>{data.displayPriorMRR}</span>
+                                        <span>{data.committed}</span>
+                                        <span>{data.attributesWithValues}</span>
+                                        <span>{data.attributes}</span>
+                                        <span>{data.displayUnitPrice}</span>
+                                        <span>{data.displayQty}</span>
+                                    </div>
+                                </template>
+                                <div class="totalSectionWrap">
+                                    <template for:each={totalTableData} for:item="total">
+                                        <div class="trow bg-totalBg fontBold" key={total.id}>
+                                            <span>{total.unitPrice}</span>
+                                            <span>{total.startMonth}</span>
+                                            <span>{total.revenueType}</span>
+                                            <span>{total.revenueRecognitionName}</span>
+                                            <span>{total.revenueRecognitionId}</span>
+                                            <span>{total.qty}</span>
+                                            <span>{total.priorMRR}</span>
+                                            <span>{total.productItemId}</span>
+                                            <span>{total.productFLIId}</span>
+                                            <span>{total.optionItemName}</span>
+                                            <span>{total.optionItemId}</span>
+                                            <span>{total.optionFLIId}</span>
+                                            <span>{total.monthsVR}</span>
+                                            <span>{total.monthsNRC}</span>
+                                            <span>{total.monthsMRC}</span>
+                                            <span>{total.months}</span>
+                                            <span>{total.displayUnitPrice}</span>
+                                            <span>{total.displayQty}</span>
+                                            <span>{total.displayPriorMRR}</span>
+                                            <span>{total.committed}</span>
+                                            <span>{total.attributesWithValues}</span>
+                                            <span>{total.attributes}</span>
+                                            <span>{total.displayUnitPrice}</span>
+                                            <span>{total.displayQty}</span>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </article>
+        </section>    
+    <!-- </section> -->
+</template>

@@ -1,0 +1,279 @@
+.forceBrandBand{
+    padding: 0!important;
+}
+/* .oppurtunityContainer{
+    
+    background-color: var(--section-background);
+} */
+.opportunityDataTable{
+    background-color: var(--section-background);
+    min-height: 100vh;
+    /* width: 90%;
+    margin: 0 auto; */
+}
+.tbody, .trow > span{
+-ms-overflow-style: none;
+    scrollbar-width: none;
+    /* width: 90%;
+    margin: 0 auto; */
+}
+tbody::-webkit-scrollbar, .trow > span::-webkit-scrollbar{
+    display: none; /*Chrome and Safari hides the scrollbars*/
+}
+
+:host{
+    --section-background:#ffffff;
+    --header-background:#0a0a0a;
+    --white-bg: #fff;
+    --total-background:#f8f8f8;
+    --dropdown-bg: #acacac;
+}
+
+.alignCenter{
+    align-self: center;
+}
+.columnGap{
+    column-gap: 1.3em;
+}
+.borderRight{
+    border-right: 1px solid  var(--section-background);
+    border-radius: 0;
+}
+.f-25{
+    font-size: 25px;
+}
+.bg-white{
+    background-color: var(--white-bg);
+}
+.bg-silver{
+    background-color: var(--section-background);
+}
+.bg-totalBg
+{
+    background-color: var(--total-background);
+}
+.fontBold{
+    font-weight: bold;
+}
+
+.headerSection{
+    background-color: var(--header-background);
+}
+
+
+/* menu Items lists started */
+/* .dropMenu{
+    width: 160px;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 5px;
+    height: 34px;
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right var( --dropdown-bg);
+    background-position-x: right;
+    background-position-x: 135px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+.dropMenu:hover{
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_up.png) no-repeat right var( --dropdown-bg)!important;
+    background-position-x: 135px!important;
+}
+.dropMenu::-ms-expand {
+    display: none;
+}
+.dropMenu .selectOption{
+    background-color: var(--section-background);
+}
+.dropMenu .selectOption-:first-child:hover{
+    background-color: var(--dropdown-bg);
+    border-bottom: 2px solid #c3eb5b!important;
+} */
+.selectedDropdown{
+    position: relative;
+    min-height: 80px;
+}
+.select-box {
+    position: absolute;
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+  }
+  
+  .select-box .options-container {
+    background:  var(--section-background);
+    color: #2f3640;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px;
+    overflow: hidden;
+  
+    order: 1;
+  }
+  
+  .selected {
+    background: var(--dropdown-bg);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: #f5f6fa;
+    position: relative;
+    font-weight: bold;
+    font-size: 12px;
+    order: 0;
+  }
+  
+  .selected::after {
+    content: "";
+    background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  
+    position: absolute;
+    height: 100%;
+    width: 20px;
+    right: 20px;
+    top: 12px;
+  
+    transition: all 0.4s;
+  }
+  
+  .select-box .options-container.active {
+    max-height: 240px;
+    opacity: 1;
+    overflow-y: scroll;
+  }
+  
+  .select-box .options-container.active + .selected::after {
+    transform: rotateX(180deg);
+    top: -10px;
+  }
+  
+  .select-box .options-container::-webkit-scrollbar {
+    width: 8px;
+    background: #0d141f;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .select-box .options-container::-webkit-scrollbar-thumb {
+    background: #525861;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .select-box .option,
+  .selected {
+    padding: 12px 24px;
+    cursor: pointer;
+  }
+  
+  .select-box .option:hover {
+    background: #414b57;
+    border-bottom:2px solid #c3eb5b;
+    color: #f5f6fa;
+  }
+  
+  .select-box label {
+    cursor: pointer;
+  }
+  
+  .select-box .option .radio {
+    display: none;
+  }
+
+/* Menu Items listed Ends */
+
+/* Table Style started */
+.fixColumn {
+    float: left;
+}
+.totalWrapper{
+    width: 95%;
+    margin: 0 auto;
+}
+.thead {
+    height: 40px;
+    white-space: nowrap;
+    border-bottom: 2px solid #c3eb5b;
+}
+.thead > span {
+    display: inline-block;
+    width: 120px;
+    line-height: 40px;
+    /* box-shadow: inset 0 0 1px 0 rgba(0,0,0,.5); */
+    background-color: transparent;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.trow {
+    white-space: nowrap;
+    width: fit-content;
+}
+.trow > span {
+    display: inline-block;
+    width: 120px;
+    /* box-shadow: inset 0 0 1px 0 rgba(0,0,0,.5); */
+    padding: 10px;
+    overflow-wrap: break-word;
+    white-space: break-spaces;
+    max-height: 60px;
+    overflow-y: auto;
+    min-height: 60px;
+    text-align: center;
+    border-bottom: 2px solid #ebebeb;
+    color: #5f5f5f;
+    font-size: 15px;
+    line-height: 40px;
+}
+.totalHeader, .totalSectionWrap .trow{
+    max-height: 40px;
+}
+.totalHeader > span, .totalSectionWrap .trow > span{
+    line-height: 20px;
+    min-height: 0;
+    padding: 10px;
+}
+
+.tbody {
+    height: 300px;
+    overflow: auto;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.fixColumn > .tbody {
+    overflow: hidden;
+    /*padding-bottom: 50px;*/
+}
+/*.fix-column > .tbody > .trow:last-child {margin-bottom: 50px;}*/
+
+/* .fix-column > .tbody > .trow {
+    margin-top: -50px;
+    margin-bottom: 50px;
+} */
+.fixColumn > .tbody > .trow:first-child {
+    margin-top: 0px;
+}
+
+.restColumns {
+    width: 100%;
+}
+.restColumns > .thead {
+    /*padding-right: 50px;*/
+    overflow: hidden;
+}
+/*.rest-columns > .thead > :last-child {margin-right: 50px;}*/
+.restColumns > .thead > span {
+    margin-right: 50px;
+    margin-left: -50px;
+}
+.restColumns > .thead > :first-child {margin-left: 0px;}
+
+
+
+/* Table Style Ended */
+
+
+
